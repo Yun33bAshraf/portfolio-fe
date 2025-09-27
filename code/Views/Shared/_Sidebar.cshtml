@@ -1,0 +1,37 @@
+﻿@{
+    var userIcon = "<svg xmlns=\"http://www.w3.org/2000/svg\" width=\"24\" height=\"24\" viewBox=\"0 0 24 24\"><path fill=\"currentColor\" d=\"M12 4a4 4 0 0 1 4 4a4 4 0 0 1-4 4a4 4 0 0 1-4-4a4 4 0 0 1 4-4m0 2a2 2 0 0 0-2 2a2 2 0 0 0 2 2a2 2 0 0 0 2-2a2 2 0 0 0-2-2m0 7c2.67 0 8 1.33 8 4v3H4v-3c0-2.67 5.33-4 8-4m0 1.9c-2.97 0-6.1 1.46-6.1 2.1v1.1h12.2V17c0-.64-3.13-2.1-6.1-2.1\"/></svg>";
+    var skillIcon = @"
+        <svg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 32 32'>
+          <path fill='currentColor' d='M30 30h-8V4h8zm-6-2h4V6h-4zm-4 2h-8V12h8zm-6-2h4V14h-4zm-4 2H2V18h8zm-6-2h4v-8H4z'/>
+        </svg>";
+    var briefcaseIcon = @"
+    <svg xmlns='http://www.w3.org/2000/svg' width='24' height='24'
+         viewBox='0 0 24 24'>
+      <g fill='none' stroke='currentColor' stroke-linecap='round'
+         stroke-linejoin='round' stroke-width='2'>
+        <path d='M3 9a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2v9a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2zm5-2V5a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2m-4 5v.01'/>
+        <path d='M3 13a20 20 0 0 0 18 0'/>
+      </g>
+    </svg>";
+}
+
+<div class="d-flex flex-column flex-shrink-0 bg-dark position-fixed top-0 start-0"
+     style="width: 4rem; height: 100vh;">
+    <ul class="nav nav-pills nav-flush flex-column text-center flex-grow-1 justify-content-center">
+        <li>
+            <a href="#home" class="nav-link py-3 rounded-0 text-light" title="Home">
+                <span>@Html.Raw(userIcon)</span>
+            </a>
+        </li>
+        <li>
+            <a href="#skills" class="nav-link py-3 rounded-0 text-light" title="Skills">
+                <span>@Html.Raw(skillIcon)</span>
+            </a>
+        </li>
+        <li>
+            <a href="#experience" class="nav-link py-3 rounded-0 text-light" title="Experience">
+                <span>@Html.Raw(briefcaseIcon)</span>
+            </a>
+        </li>
+    </ul>
+</div>
