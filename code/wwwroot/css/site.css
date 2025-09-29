@@ -94,7 +94,7 @@ body {
 .cursor {
     display: inline-block;
     width: 8px;
-    height: 16px;
+    height: 2px;
     background: #fff; /* white cursor */
     margin-left: 4px;
     animation: blink 1s infinite;
