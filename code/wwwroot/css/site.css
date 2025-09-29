@@ -34,7 +34,7 @@ body {
 
 /*CUSTOM CSS*/
 
-/*skills sections*/
+/*skills section*/
 
 .skill-logo {
     width: 60px;
@@ -57,4 +57,57 @@ body {
     font-weight: 500;
     margin-top: 0.75rem;
 }
+
+/*experience section*/
+
+/* Rectangle container */
+.rect-box {
+    min-height: 25vh;
+    max-height: 75vh;
+    transition: all 0.3s ease-in-out;
+/*    border: 1px solid rgba(255,255,255,0.2);*/
+}
+
+/* Hover effect */
+.experience-card:hover {
+    transform: scale(1.02);
+    box-shadow: 0 8px 25px rgba(0,0,0,0.3);
+    border-color: transparent;
+}
+
+/* Company logo */
+.company-logo {
+    width: 60px;
+    height: 60px;
+    object-fit: contain;
+}
+
+/* Console box */
+.console-box {
+    font-family: "Courier New", monospace;
+    font-size: 0.95rem;
+    line-height: 1.6;
+/*    border-left: 2px solid #fff;  white border now */
+}
+
+/* Blinking cursor */
+.cursor {
+    display: inline-block;
+    width: 8px;
+    height: 16px;
+    background: #fff; /* white cursor */
+    margin-left: 4px;
+    animation: blink 1s infinite;
+}
+
+@keyframes blink {
+    0%, 50% {
+        opacity: 1;
+    }
+
+    50.01%, 100% {
+        opacity: 0;
+    }
+}
+
 
