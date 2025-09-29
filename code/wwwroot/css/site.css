@@ -36,33 +36,32 @@ body {
 
 /*sidebar section*/
 
-/* Default nav-link */
 .nav-link {
     position: relative;
     padding: 1rem 0;
     color: #adb5bd;
     transition: all 0.3s ease;
-    border-right: 4px solid transparent; /* space for active state */
+    border-right: 4px solid transparent;
+    --active-color: #0d6efd; /* fallback */
 }
 
-    /* Active nav-link */
+    /* Active nav gets full-color background */
     .nav-link.active {
-        color: #fff; /* brighten icon */
-        background-color: #212529; /* subtle highlight */
-        border-right: 4px solid #0d6efd; /* blue line */
+        color: #fff !important; /* make icon/text white */
+        background-color: var(--active-color) !important;
+/*        border-right: 4px solid var(--active-color);*/
     }
 
-        /* Arrow pointer */
-        .nav-link.active::after {
+/*        .nav-link.active::after {
             content: "";
             position: absolute;
-            right: -8px; /* overflow outside */
+            right: -8px;
             top: 50%;
             transform: translateY(-50%);
             border-top: 8px solid transparent;
             border-bottom: 8px solid transparent;
-            border-left: 8px solid #0d6efd; /* arrow color matches border */
-        }
+            border-left: 8px solid var(--active-color);
+        }*/
 
 
 /*skills section*/

@@ -19,17 +19,17 @@
      style="width: 4rem; height: 100vh;">
     <ul class="nav nav-pills nav-flush flex-column text-center flex-grow-1 justify-content-center">
         <li>
-            <a href="#home" class="nav-link py-3 rounded-0 text-light" title="Home">
+            <a href="#home" class="nav-link py-3 rounded-0 text-light" title="Home" data-color="#000">
                 <span>@Html.Raw(userIcon)</span>
             </a>
         </li>
         <li>
-            <a href="#skills" class="nav-link py-3 rounded-0 text-light" title="Skills">
+            <a href="#skills" class="nav-link py-3 rounded-0 text-light" title="Skills" data-color="#0d6efd">
                 <span>@Html.Raw(skillIcon)</span>
             </a>
         </li>
         <li>
-            <a href="#experience" class="nav-link py-3 rounded-0 text-light" title="Experience">
+            <a href="#experience" class="nav-link py-3 rounded-0 text-light" title="Experience" data-color="#ffc107">
                 <span>@Html.Raw(briefcaseIcon)</span>
             </a>
         </li>
@@ -37,7 +37,7 @@
 </div>
 
 <script>
-        document.addEventListener("DOMContentLoaded", () => {
+    document.addEventListener("DOMContentLoaded", () => {
         const sections = document.querySelectorAll("section[id]");
         const navLinks = document.querySelectorAll(".nav-link");
 
@@ -45,13 +45,16 @@
             entries.forEach(entry => {
                 if (entry.isIntersecting) {
                     navLinks.forEach(link => link.classList.remove("active"));
+
                     const activeLink = document.querySelector(`.nav-link[href="#${entry.target.id}"]`);
-                    if (activeLink) activeLink.classList.add("active");
+                    if (activeLink) {
+                        const color = activeLink.getAttribute("data-color");
+                        activeLink.style.setProperty("--active-color", color);
+                        activeLink.classList.add("active");
+                    }
                 }
             });
-        }, {
-            threshold: 0.6 // section considered active when 60% in view
-        });
+        }, { threshold: 0.6 });
 
         sections.forEach(section => observer.observe(section));
     });
